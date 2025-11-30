@@ -5,7 +5,7 @@ https://en.wikipedia.org/wiki/Midpoint_circle_algorithm#Jesko's_method
 
 # import numpy as np
 
-def matrix(dim):
+def zero_matrix(dim):
   m = [[0 for i in range(dim)] for i in range(dim)]
   return m
 
@@ -14,7 +14,7 @@ def circumference(dim,r):
     if 0 < r:
       if dim >= r*2:
 
-        u = matrix(dim)
+        u = zero_matrix(dim)
         c = dim//2
         i,j = [c,c]
         t1 = r / 16
@@ -44,5 +44,6 @@ def circumference(dim,r):
       return print(f"Radius {r} less than zero.")
   else:
     return print(f"{dim} is even. Only odd numbers.")
+
 
 # print(np.array(circumference(11,5),dtype='float'))
